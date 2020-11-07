@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  background: #eee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  padding: 30px;
+  height: 100vh;
+  width: 90%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-list {
+  background: #fff;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  padding: 10px 15px;
+  max-width: 700px;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo {
+  border: solid 1px #eee;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 10px 15px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-radius: 3px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+body .input {
+  display: block;
+  border: 1px solid rgba(128, 128, 128, 0.507);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea.input {
+  min-height: 200px;
+}
+
+.message {
+  padding: 1rem;
+  font-size: 14px;
+  position: relative;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.808);
+  width: 700px;
+  max-width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.message::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 0;
+  top: 0;
+  background: #444;
+}
+
+.message-hide {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  outline-color: inherit;
+}
+
+.message p {
+  line-height: 1.8;
+}
+
+.message.message-success {
+  background: #28df9948;
+  color: #005c39;
+}
+
+.message.message-success::before {
+  background: #0bbb77;
+}
+
+.message.message-danger {
+  background: #ff4b5d5e;
+  color: #ca081c;
+}
+
+.message.message-danger::before {
+  background: #e22538;
 }
